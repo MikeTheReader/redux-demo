@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import StateViewer from './state-viewer';
 import ValueInput from './value-input';
 import CountInput from './count-input';
+import CountSlider from './count-slider';
 import BlankOutButton from './blank-out-button';
 import DisplayContainer from './display-container';
 import MetaContainer from './meta-container';
@@ -20,6 +21,7 @@ export default class App extends Component {
                       <div className="panel-body">
                         <ValueInput/>
                         <CountInput/>
+                        <CountSlider/>
                         <BlankOutButton/>
                       </div>
                   </div>
