@@ -8,7 +8,8 @@ import DisplayContainer from './display-container';
 import MetaContainer from './meta-container';
 import Highlight from 'react-highlight';
 
-require('../../node_modules/highlight.js/styles/default.css');
+require('../../style/highlight.css')
+require('../../style/index.css')
 
 export default class App extends Component {
   render() {
@@ -25,7 +26,6 @@ export default class App extends Component {
                         <BlankOutButton/>
                       </div>
                   </div>
-
               </div>
               <div className="col-md-4">
                   <div className="panel panel-info">
@@ -48,7 +48,7 @@ export default class App extends Component {
                       </div>
                       <div className="panel-body">
                         <Highlight>
-                            <div id='action'></div>
+                            <div id="action"></div>
                         </Highlight>
                       </div>
                   </div>
@@ -58,7 +58,6 @@ export default class App extends Component {
                         <MetaContainer />
                       </div>
                   </div>
-
               </div>
           </div>
     );

@@ -3,9 +3,6 @@ import { connect } from 'react-redux';
 import { getMeta } from './meta-selector'
 import Highlight from 'react-highlight';
 
-require('../../node_modules/highlight.js/styles/default.css');
-
-
 class MetaContainer extends Component {
     render() {
         let distribution = null;

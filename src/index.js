@@ -6,9 +6,6 @@ import { createStore, applyMiddleware } from 'redux';
 import App from './components/app';
 import reducers from './reducers';
 
-var actionTimeout = null;
-
-
 const loggerMiddleware = (store) => (next) => (action) => {
     document.querySelector('#action').innerHTML = JSON.stringify(action, null, 2);
     let result = next(action);
