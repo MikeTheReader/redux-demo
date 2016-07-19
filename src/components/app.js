@@ -4,6 +4,10 @@ import ValueInput from './value-input';
 import CountInput from './count-input';
 import BlankOutButton from './blank-out-button';
 import DisplayContainer from './display-container';
+import MetaContainer from './meta-container';
+import Highlight from 'react-highlight';
+
+require('../../node_modules/highlight.js/styles/default.css');
 
 export default class App extends Component {
   render() {
@@ -19,6 +23,7 @@ export default class App extends Component {
                         <BlankOutButton/>
                       </div>
                   </div>
+
               </div>
               <div className="col-md-4">
                   <div className="panel panel-info">
@@ -35,6 +40,23 @@ export default class App extends Component {
                           <StateViewer />
                       </div>
                   </div>
+                  <div className="panel panel-danger">
+                      <div className="panel-heading">
+                          Most Recent Action
+                      </div>
+                      <div className="panel-body">
+                        <Highlight>
+                            <div id='action'></div>
+                        </Highlight>
+                      </div>
+                  </div>
+                  <div className="panel panel-info">
+                      <div className="panel-heading">Show Stuff about the Stuff</div>
+                      <div className="panel-body">
+                        <MetaContainer />
+                      </div>
+                  </div>
+
               </div>
           </div>
     );

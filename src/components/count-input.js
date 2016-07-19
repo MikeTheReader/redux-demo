@@ -7,7 +7,7 @@ class CountInput extends Component {
     render() {
         return (
             <div className='form-group'>
-                <label>Input Number</label>
+                <label>How Many Times Do You Want to Show the Text?</label>
                 <input className='form-control' type='number' value={this.props.count} onChange={(event) => this.props.changeCount(event.target.value)}/>
             </div>
         );
