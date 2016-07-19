@@ -13,7 +13,6 @@ class CountSlider extends Component {
                     value={this.props.count}
                     min="0" max="100"
                     onChange={(event) => this.props.changeCount(event.target.value)}/>
-
             </div>
         );
     }

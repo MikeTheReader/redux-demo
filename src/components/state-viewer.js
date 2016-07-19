@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Highlight from 'react-highlight';
 
 
-class StateViewer extends Component {
-    render() {
-        return (
-            <div>
-                <Highlight>
-                    {this.props.state}
-                </Highlight>
-            </div>
-        );
-    }
+function StateViewer(props) {
+    return (
+        <div>
+            <Highlight>
+                {props.state}
+            </Highlight>
+        </div>
+    );
 }
 
 function mapStateToProps(state) {

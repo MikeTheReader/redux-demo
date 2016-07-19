@@ -8,7 +8,10 @@ class ValueInput extends Component {
         return (
             <div className='form-group'>
                 <label>Input Text</label>
-                <input className='form-control' type='text' value={this.props.value} onChange={(event) => this.props.changeValue(event.target.value)}/>
+                <input className='form-control'
+                    type='text'
+                    value={this.props.value}
+                    onChange={(event) => this.props.changeValue(event.target.value)}/>
             </div>
         );
     }
