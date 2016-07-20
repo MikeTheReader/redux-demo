@@ -29,8 +29,6 @@ class MetaContainer extends Component {
 
 function mapStateToProps(state) {
     return {
-        count: state.count,
-        value: state.value,
         meta: getMeta(state)
     };
 }
