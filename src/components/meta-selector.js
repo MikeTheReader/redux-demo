@@ -7,7 +7,6 @@
 export const getMeta = (state) => {
     return {
         squared: state.count * state.count,
-        letters: JSON.stringify(getLetterDistribution(state.value), null, 1),
         chartData: getLetterChartData(state.value)
     };
 }
