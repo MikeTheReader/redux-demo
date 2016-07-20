@@ -24,6 +24,16 @@ export default class App extends Component {
                         <CountInput/>
                         <CountSlider/>
                         <BlankOutButton/>
+                        
+                      </div>
+                  </div>
+                  <div className="panel panel-success">
+                      <div className="panel-heading">Enter Stuff</div>
+                      <div className="panel-body">
+                        <ValueInput/>
+                        <CountInput/>
+                        <CountSlider/>
+                        <BlankOutButton/>
                       </div>
                   </div>
               </div>
