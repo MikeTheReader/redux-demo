@@ -7,7 +7,8 @@
 export const getMeta = (state) => {
     return {
         squared: state.count * state.count,
-        letters: getLetterDistribution(state.value)
+        letters: JSON.stringify(getLetterDistribution(state.value), null, 1),
+        chartData: getLetterChartData(state.value)
     };
 }
 
@@ -22,5 +23,26 @@ function getLetterDistribution(value) {
         }
         distribution[letter] += 1;
     })
-    return JSON.stringify(distribution, null, 1);
+    if (distribution[' ']) {
+        delete distribution[' ']
+    }
+    return distribution;
+}
+
+function getLetterChartData(value) {
+    console.log('getLetterChartData', value)
+    if (!value) return [];
+
+    let distribution = getLetterDistribution(value);
+    let chartData = [];
+    if (distribution) {
+        Object.keys(distribution).forEach((letterKey) => {
+            chartData.push({
+                text: letterKey,
+                value: distribution[letterKey]
+            })
+        });
+    }
+    console.log('chartData', chartData)
+    return chartData;
 }
