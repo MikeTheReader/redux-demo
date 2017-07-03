@@ -7,6 +7,7 @@ import BlankOutButton from './blank-out-button';
 import DisplayContainer from './display-container';
 import MetaContainer from './meta-container';
 import Highlight from 'react-highlight';
+import EnterStuff from '../container/enter-stuff';
 
 require('../../style/highlight.css')
 require('../../style/index.css')
@@ -36,6 +37,7 @@ export default class App extends Component {
                         <BlankOutButton/>
                       </div>
                   </div>
+                  <EnterStuff/>
               </div>
               <div className="col-md-4">
                   <div className="panel panel-info">
