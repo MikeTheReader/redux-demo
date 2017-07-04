@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CountSlider = ({value, onChange}) => {
+const CountSlider = ({value, onChange, label}) => {
     return (
         <div className='form-group'>
-            <label>Or use this one to adjust the count:</label>
+            <label>{label}</label>
             <input
                 type='range'
                 value={value}
@@ -14,6 +14,7 @@ const CountSlider = ({value, onChange}) => {
 }
 
 CountSlider.propTypes = {
+    label: React.PropTypes.string.isRequired,
     value: React.PropTypes.number,
     onChange: React.PropTypes.func.isRequired
 }

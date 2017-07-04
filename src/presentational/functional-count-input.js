@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CountInput = ({value, onChange}) => {
+const CountInput = ({value, onChange, label}) => {
     return (
         <div className='form-group'>
-            <label>How Many Times Do You Want to Show the Text?</label>
+            <label>{label}</label>
             <input
                 className='form-control'
                 type='number'
@@ -15,6 +15,7 @@ const CountInput = ({value, onChange}) => {
 }
 
 CountInput.propTypes = {
+    label: React.PropTypes.string.isRequired,
     count: React.PropTypes.number,
     onChange: React.PropTypes.func.isRequired
 }
